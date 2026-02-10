@@ -1,0 +1,43 @@
+settings:
+  # Максимальный баланс игрока
+  max_balance: 1000000
+
+  # Начальный баланс для нового игрока
+  starting_balance: 100
+
+  # Название валюты
+  currency_name: "Ромашки"
+
+top:
+  # Лимит количества игроков в топе
+  limit: 10
+
+messages:
+  # Сообщения для плагина
+  balance_list_header: "&eСписок всех игроков и их балансов:"
+  balance_list_format: "&a{player}: &e{balance} {currency}"
+  balance_single_format: "&aИгрок {player} имеет баланс: &e{balance} {currency}"
+  player_not_found: "&cИгрок {player} не найден в базе."
+  balance_check: "&aВаш баланс: &e%balance% %currency%"
+  balance_check_other: "&aБаланс игрока &e%player%: &e%balance% %currency%"
+  give_success: "&aВы выдали &e%amount% %currency% &aигроку &e%player%"
+  give_all_success: "&aВы раздали &e{amount} {currency} &aигрокам ({type}): &e{count} &aчеловек."
+  take_success: "&aВы забрали &e%amount% %currency% &aу игрока &e%player%"
+  set_success: "&aВы установили баланс игрока &e%player%: &e%amount% %currency%"
+  reload_success: "&aКонфигурация перезагружена!"
+  error_not_player: "&cЭту команду можно использовать только игроку!"
+  error_no_permission: "&cУ вас недостаточно прав для выполнения этой команды!"
+  error_player_not_found: "&cИгрок &e%player% &cне найден!"
+  error_invalid_amount: "&cУкажите корректное число!"
+  error_invalid_type: "&cНеверный тип: используйте online, offline или all."
+  tops_header: "&6Топ игроков:"
+  tops_entry: "&e#%position% &a%player%: &e%balance% %currency%"
+  help_header: "&6Список доступных команд:"
+  help_commands:
+    - "&e/rom give <игрок> <сумма> - Выдать игроку валюту"
+    - "&e/rom take <игрок> <сумма> - Забрать у игрока валюту"
+    - "&e/rom set <игрок> <сумма> - Установить баланс игрока"
+    - "&e/rom balance [игрок] - Проверить баланс"
+    - "&e/rom tops - Показать топ игроков"
+    - "&e/rom giveall <online/offline/all> <сумма> - Выдать валюту всем"
+    - "&e/rom reload - Перезагрузить конфигурацию"

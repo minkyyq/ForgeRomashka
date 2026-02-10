@@ -2,3 +2,14 @@ name: ForgeRomashka
 version: '${version}'
 main: ru.minkyyq.forgeromashka.ForgeRomashka
 api-version: '1.16'
+commands:
+  rom:
+    description: Управление донат валютой
+    usage: /rom <command> [<args>]
+    permission: forgeromashka.admin
+    aliases:
+      - "romashka"
+permissions:
+  pmromashka.admin:
+    default: op
+depend: [PlaceholderAPI]

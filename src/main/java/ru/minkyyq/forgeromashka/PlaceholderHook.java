@@ -1,14 +1,15 @@
 package ru.minkyyq.forgeromashka;
 
+import me.clip.placeholderapi.expansion.PlaceholderExpansion;
 import org.bukkit.entity.Player;
 
 import java.util.List;
 import java.util.Map;
 
-public class PlaceholderExpansion {
+public class PlaceholderHook extends PlaceholderExpansion {
     private final ForgeRomashka plugin;
 
-    public PlaceholderExpansion(ForgeRomashka plugin) {
+    public PlaceholderHook(ForgeRomashka plugin) {
         this.plugin = plugin;
     }
 

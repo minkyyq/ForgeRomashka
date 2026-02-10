@@ -2,15 +2,34 @@ plugins {
     id 'java'
 }
 
-group = 'ru.minkyy'
+group = 'ru.minkyyq'
 version = '1.0-SNAPSHOT'
 
 repositories {
     mavenCentral()
+    maven {
+        name = "papermc-repo"
+        url = "https://repo.papermc.io/repository/maven-public/"
+    }
+    maven {
+        name = "sonatype"
+        url = "https://oss.sonatype.org/content/groups/public/"
+    }
+    maven {
+        url = 'https://repo.extendedclip.com/releases/'
+    }
+    maven { url 'https://jitpack.io' }
 }
 
 dependencies {
+    compileOnly 'me.clip:placeholderapi:2.11.6'
+    compileOnly 'org.projectlombok:lombok:1.18.24'
+    annotationProcessor 'org.projectlombok:lombok:1.18.24'
+    testCompileOnly 'org.projectlombok:lombok:1.18.24'
+    testAnnotationProcessor 'org.projectlombok:lombok:1.18.24'
+    compileOnly "com.destroystokyo.paper:paper-api:1.16.5-R0.1-SNAPSHOT"
 }
+
 
 def targetJavaVersion = 8
 java {
